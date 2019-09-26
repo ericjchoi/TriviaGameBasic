@@ -1,0 +1,116 @@
+<!-- HW5 Trivia Game Basic -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>HW5 Trivia Game Basic</title>
+</head>
+
+<body background="assets/images/sunsetImage.jpeg">
+    <div class="mainContainer">
+        <button type="button" class="btn btn-lg btn-block fixed-top" id="gameTitle">Trivia Game Basic</button>
+        <button type="button" class="btn btn-lg btn-block fixed-bottom" id="timeRemaining">Time Remaining&nbsp;<span
+                id="timeDisplay"></span></button>
+        <br><br><br><br>
+        <div id="startBtnContainer">
+            <br><br><br><br>
+            <button id="startBtn">&nbsp;&nbsp;Start&nbsp;&nbsp;</button>
+        </div>
+        <div id="questionContainer">
+            <div id="q1Container">
+                <p class="question" id="q1">1. Which planet is located closest to the Sun?</p>
+                <input type="radio" id="q1choice1">&nbsp;Mars&nbsp;&nbsp;
+                <input type="radio" id="q1choice2">&nbsp;Saturn&nbsp;&nbsp;
+                <input type="radio" id="q1choice3">&nbsp;Pluto&nbsp;&nbsp;
+                <input type="radio" id="q1choice4">&nbsp;Mercury&nbsp;&nbsp;
+                <input type="radio" id="q1choice5">&nbsp;Earth&nbsp;&nbsp;
+            </div>
+            <hr>
+            <div id="q2Container">
+                <p class="question" id="q2">2. Which fruit is the biggest in size when fully ripened?</p>
+                <input type="radio" id="q2choice1">&nbsp;Peach&nbsp;&nbsp;
+                <input type="radio" id="q2choice2">&nbsp;Blueberry&nbsp;&nbsp;
+                <input type="radio" id="q2choice3">&nbsp;Watermelon&nbsp;&nbsp;
+                <input type="radio" id="q2choice4">&nbsp;Apple&nbsp;&nbsp;
+                <input type="radio" id="q2choice5">&nbsp;Strawberry&nbsp;&nbsp;
+            </div>
+            <hr>
+            <div id="q3Container">
+                <p class="question" id="q3">3. Who is not a super hero?</p>
+                <input type="radio" id="q3choice1">&nbsp;Superman&nbsp;&nbsp;
+                <input type="radio" id="q3choice2">&nbsp;Acuaman&nbsp;&nbsp;
+                <input type="radio" id="q3choice3">&nbsp;Wonder Woman&nbsp;&nbsp;
+                <input type="radio" id="q3choice4">&nbsp;Spiderman&nbsp;&nbsp;
+                <input type="radio" id="q3choice5">&nbsp;Homer Simpson&nbsp;&nbsp;
+            </div>
+            <hr>
+            <div id="q4Container">
+                <p class="question" id="q4">4. Who is not a Beatles member?</p>
+                <input type="radio" id="q4choice1">&nbsp;John Lennon&nbsp;&nbsp;
+                <input type="radio" id="q4choice2">&nbsp;Paul McCartney&nbsp;&nbsp;
+                <input type="radio" id="q4choice3">&nbsp;Gordon Ramsay&nbsp;&nbsp;
+                <input type="radio" id="q4choice4">&nbsp;George Harrison&nbsp;&nbsp;
+                <input type="radio" id="q4choice5">&nbsp;Ringo Starr&nbsp;&nbsp;
+            </div>
+            <hr>
+            <div id="q5Container">
+                <p class="question" id="q5">5. Which is not a capital city of a country?</p>
+                <input type="radio" id="q5choice1">&nbsp;London&nbsp;&nbsp;
+                <input type="radio" id="q5choice2">&nbsp;Paris&nbsp;&nbsp;
+                <input type="radio" id="q5choice3">&nbsp;Seoul&nbsp;&nbsp;
+                <input type="radio" id="q5choice4">&nbsp;Seattle&nbsp;&nbsp;
+                <input type="radio" id="q5choice5">&nbsp;Beijing&nbsp;&nbsp;
+            </div>
+            <hr>
+            <div id="q6Container">
+                <p class="question" id="q6">6. Which is a biggest US state in size?</p>
+                <input type="radio" id="q6choice1">&nbsp;Washington&nbsp;&nbsp;
+                <input type="radio" id="q6choice2">&nbsp;California&nbsp;&nbsp;
+                <input type="radio" id="q6choice3">&nbsp;New York&nbsp;&nbsp;
+                <input type="radio" id="q6choice4">&nbsp;Oregon&nbsp;&nbsp;
+                <input type="radio" id="q6choice5">&nbsp;Texas&nbsp;&nbsp;
+            </div>
+            <hr>
+            <div id="q7Container">
+                <p class="question" id="q7">7. Which number is the second smallest number?</p>
+                <input type="radio" id="q7choice1">&nbsp;0.5&nbsp;&nbsp;
+                <input type="radio" id="q7choice2">&nbsp;0.5 X 0.5&nbsp;&nbsp;
+                <input type="radio" id="q7choice3">&nbsp;0.5 X 0.5 X 0.5&nbsp;&nbsp;
+                <input type="radio" id="q7choice4">&nbsp;0.5 X 0.5 X 0.5 X 0.5&nbsp;&nbsp;
+                <input type="radio" id="q7choice5">&nbsp;0.5 X 0.5 X 0.5 X 0.5 X 0.5&nbsp;&nbsp;
+            </div>
+            <br><br>
+            <button id="doneBtn"> Done </button>
+        </div>
+        <div id="scoreReportContainer">
+            <p id="reportLabel1">Score Report</p>
+            <p id="reportLabel2">Correct Answers:&nbsp;<span id="numCorrect"></span>
+                &nbsp;(&nbsp;<span id="numCorrectPercent"></span>&nbsp;%&nbsp;)</p>
+            <p id="reportLabel3">Incorrect Answers:&nbsp;<span id="numIncorrect"></span>
+                &nbsp;(&nbsp;<span id="numIncorrectPercent"></span>&nbsp;%&nbsp;)</p>
+            <p id="reportLabel4">Unanswered:&nbsp;<span id="numUnanswered"></span>
+                &nbsp;(&nbsp;<span id="numUnansweredPercent"></span>&nbsp;%&nbsp;)</p>
+        </div>
+        <br><br><br><br>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
